@@ -18,10 +18,10 @@ class TestTicTacToe(unittest.TestCase):
         board_column_win = [['X', ' ', ' '], ['X', ' ', ' '], ['X', ' ', ' ']]
         self.assertTrue(is_win(board_column_win, 'X'))
 
-    # def test_is_win_identifies_diagonal_win(self):
-    #     board_diagonal_win = [['X', ' ', ' '], [' ', 'X', ' '], [' ', ' ', 'X']]
-    #     self.assertTrue(is_win(board_diagonal_win, 'X'))
-    #
+    def test_is_win_identifies_diagonal_win(self):
+        board_diagonal_win = [['X', ' ', ' '], [' ', 'X', ' '], [' ', ' ', 'X']]
+        self.assertTrue(is_win(board_diagonal_win, 'X'))
+
     def test_tally_wins_counts_correct_number_of_wins(self):
         """Test that tally_wins function correctly counts the number of wins."""
         results = [True, False, True]
