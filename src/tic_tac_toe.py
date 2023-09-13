@@ -5,25 +5,38 @@ The program has a number of bugs that are introduced one at a time. The goal is 
 Ensure you step through this program in an IDE debugger and pdb to understand how the program works and to find the bugs.'''
 
 def initialize_board():
+    '''Initialise the game board'''
     return [[' ' for _ in range(3)] for _ in range(3)]
 
 def print_board(board):
+    '''Print the game board'''
     for row in board:
         print('|'.join(row))
         print('-' * 5)
 
 def _check_rows(board, player):
     '''Check rows for win condition for a given player.
-    # TODO: Update docstrings to follow Google Doc style: https://google.github.io/styleguide/pyguide.html
+    Args:
+      board(list): 3x3 grid to represent game board
+      player(str): Checks for a win for player 'X' or 'O'
+
+    Returns:
+      bool: True if wins any row, else False
     '''
     for i in range(3):
         if all([cell == player for cell in board[i]]):  
             return True
     return False
 
+# fixed not PEP-8 standard
 def _check_columns(board, player):
     '''Check columns for win condition for a given player.
-    # TODO: Update docstrings to follow Google Doc style: https://google.github.io/styleguide/pyguide.html
+    Args:
+        board(list): 3x3 grid to represent game board
+        player(str): Checks for a win for player 'X' or 'O'
+
+    Returns:
+        bool: True if wins any column, else False
     '''
     for i in range(3):
         if all([board[j][i] == player for j in range(3)]):  
@@ -32,7 +45,12 @@ def _check_columns(board, player):
 
 def _check_diagonals(board, player):
     '''Check diagonals for win condition for a given player.
-    # TODO: Update docstrings to follow Google Doc style: https://google.github.io/styleguide/pyguide.html
+    Args:
+        board(list): 3x3 grid to represent game board
+        player(str): Checks for a win for player 'X' or 'O'
+
+    Returns:
+         bool: True if wins any diagonal, else False
     '''
     if board[1][0] == board[1][1] == board[2][2] == player or \
        board[1][2] == board[1][1] == board[2][0] == player:  
@@ -41,13 +59,22 @@ def _check_diagonals(board, player):
 
 def is_win(board, player):
     '''Check rows, columns, and diagonals for win condition for a given player.
-    # TODO: Update docstrings to follow Google Doc style: https://google.github.io/styleguide/pyguide.html
+    Args:
+        board(list): 3x3 grid to represent game board
+        player(str): Checks for a win for player 'X' or 'O'
+
+    Returns:
+        bool: True if wins (any rows, column or diagonal), else False
     '''
     return _check_rows(board, player) or _check_columns(board, player) or _check_diagonals(board, player)
 
 def tally_wins(results):
     '''Count the number of wins.
-    # TODO: Update docstrings to follow Google Doc style: https://google.github.io/styleguide/pyguide.html
+    Args:
+        results (list):  a list of wins (bools)
+
+    Returns:
+        int: sum of wins
     '''
     return sum(results)
 

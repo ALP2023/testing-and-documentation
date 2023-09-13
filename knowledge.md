@@ -1,7 +1,9 @@
 ### Reflection Questions for Portfolio Activity: ICTPRG443
 
 1. **Debugging Methodology**: 
-    - Outline the debugging methodology you employed to identify the bug(s) in the Tic-Tac-Toe game? What debugging tools did you use and how did they aid in the debugging process?
+    - Outline the debugging methodology you employed to identify the bug(s) in the Tic-Tac-Toe game? What debugging tools did you use and how did they aid in the debugging process? 
+    - STEP1: An initial visual run through of the code
+    - STEP2: 
 
 2. **Role of Documentation**: 
     - Did the existing documentation (comments, docstrings, onboarding documentation, etc.) help you in understanding and debugging the code? Provide examples.
