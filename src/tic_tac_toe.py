@@ -28,7 +28,7 @@ def _check_rows(board, player):
             return True
     return False
 
-# fixed not PEP-8 standard
+# fix not PEP-8 standard
 def _check_columns(board, player):
     '''Check columns for win condition for a given player.
     Args:
