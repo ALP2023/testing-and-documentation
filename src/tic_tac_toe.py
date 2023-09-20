@@ -52,8 +52,8 @@ def _check_diagonals(board, player):
     Returns:
          bool: True if wins any diagonal, else False
     '''
-    if board[1][0] == board[1][1] == board[2][2] == player or \
-       board[1][2] == board[1][1] == board[2][0] == player:  
+    if board[0][0] == board[1][1] == board[2][2] == player or \
+       board[0][2] == board[1][1] == board[2][0] == player:
         return True
     return False
 

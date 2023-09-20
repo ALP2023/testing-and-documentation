@@ -2,8 +2,13 @@
 
 1. **Debugging Methodology**: 
     - Outline the debugging methodology you employed to identify the bug(s) in the Tic-Tac-Toe game? What debugging tools did you use and how did they aid in the debugging process? 
-    - STEP1: An initial visual run through of the code
-    - STEP2: 
+    - I would first perform an initial visual run through of the code to identify issues and fix.
+    - Then I'll go through the following process
+    - STEP1: Run the code
+    - STEP2: Try to break it, identify an issue
+    - STEP3: Review the Error Raised
+    - STEP4: Go to the code that raises the error
+    - STEP5: Set break points by clicking in the left-hand margin next to the line of code where I want to start debugging. A red dot will appear, indicating a breakpoint.
 
 2. **Role of Documentation**: 
     - Did the existing documentation (comments, docstrings, onboarding documentation, etc.) help you in understanding and debugging the code? Provide examples.
