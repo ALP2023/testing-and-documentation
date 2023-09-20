@@ -19,6 +19,7 @@ class TestTicTacToe(unittest.TestCase):
         self.assertTrue(is_win(board_column_win, 'X'))
 
     def test_is_win_identifies_diagonal_win(self):
+        """Test that is_win function correctly identifies wins in diagonals (corners of 3x3 grid)."""
         board_diagonal_win = [['X', ' ', ' '], [' ', 'X', ' '], [' ', ' ', 'X']]
         self.assertTrue(is_win(board_diagonal_win, 'X'))
 
