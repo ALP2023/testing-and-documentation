@@ -2,7 +2,15 @@ import unittest
 
 from tic_tac_toe import initialize_board, is_win, tally_wins
 
+def is_valid_input(input_str):
+    try:
+        row, col = map(int, input_str.split())
+        return 0 <= row <= 2 and 0 <= col <= 2
+    except ValueError:
+        return False
 class TestTicTacToe(unittest.TestCase):
+    def test_invalid_pattern_single(self):
+        self.assertTrue(is_valid_input("0"))
 
     def test_initialize_board_creates_empty_board(self):
         """Test that initialize_board function returns an empty 3x3 board."""

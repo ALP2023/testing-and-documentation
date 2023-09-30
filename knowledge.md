@@ -1,9 +1,9 @@
 ### Reflection Questions for Portfolio Activity: ICTPRG443
 
 1. **Debugging Methodology**: 
-    - Outline the debugging methodology you employed to identify the bug(s) in the Tic-Tac-Toe game? What debugging tools did you use and how did they aid in the debugging process? 
-    - My workflow begins with an initial visual run through of the code to identify issues and fix (where possible).
-    - Then performing the following debugging process using the Pycharm debugging tool:
+   Outline the debugging methodology you employed to identify the bug(s) in the Tic-Tac-Toe game? What debugging tools did you use and how did they aid in the debugging process? 
+    - My workflow begins with an initial visual run through of the code to identify potential issues or problems.
+    - Then perform the following debugging process using the Pycharm debugging tool:
     - STEP1: Run the code
     - STEP2: Try to break it, identify an issue
     - STEP3: Review the Error(s) Raised
@@ -13,9 +13,11 @@
     - STEP7: Once debugging is completed stop the debugging session by clicking the red square, remove breakpoints.
     - STEP8: Run the program again to check your fixes are correct. Rinse and repeat to seek another issue to resolve.
 
+
 2. **Role of Documentation**: 
-    - Did the existing documentation (comments, docstrings, onboarding documentation, etc.) help you in understanding and debugging the code? Provide examples.
-The onboarding and readme documentation are particularly helpful, as it provide valuable information regarding the expectations of this assessment. The readme document, in particular, assisted in stepping through the processes for this assessment. However, the comments and docstrings tend to only have the basic information and could be expanded.
+    Did the existing documentation (comments, docstrings, onboarding documentation, etc.) help you in understanding and debugging the code? Provide examples.
+   - The onboarding and readme documentation are particularly helpful, as it provide valuable information regarding the expectations of this assessment. The readme document, in particular, assisted in stepping through the processes for this assessment. However, the comments and docstrings tend to only have the basic information and could be expanded.
+
 
 3. **Updating Documentation**: 
     - How did you go about updating the documentation? What information did you include to make the codebase easier to understand for future developers?
@@ -30,9 +32,10 @@ Updated doc strings using Google Doc style, which includes a short function desc
 
 4. **Reflection on Testing**: 
     - How did writing test cases help you in the debugging process? Did the act of writing a test case provide any insights into the bug you were trying to fix?
-
+![img.png](img/issue_2_test_failed.png)
 5. **Testing Challenges and Strategies**: 
     - What challenges did you encounter while writing and running the test cases? What strategies did you employ to overcome these challenges?
+There's a distinct pattern in writing test cases, but understanding the nuances of what you're trying to test can be tricky. My initial approach is to determine what exactly I want to test. For example, with the user input validation test, I'd approach in the way I would
 
 6. **General Reflection**: 
     - How did this activity help you in understanding the importance of debugging, testing, and documentation in a real-world coding project? What are the key takeaways for you from this portfolio activity?
