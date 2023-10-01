@@ -5,17 +5,20 @@ The program has a number of bugs that are introduced one at a time. The goal is 
 Ensure you step through this program in an IDE debugger and pdb to understand how the program works and to find the bugs.'''
 
 def initialize_board():
-    '''Initialise the game board'''
+    '''
+    Initialise the game board'''
     return [[' ' for _ in range(3)] for _ in range(3)]
 
 def print_board(board):
-    '''Print the game board'''
+    '''
+    Print the game board'''
     for row in board:
         print('|'.join(row))
         print('-' * 5)
 
 def _check_rows(board, player):
-    '''Check rows for win condition for a given player.
+    '''
+    Check rows for win condition for a given player.
     Args:
       board(list): 3x3 grid to represent game board
       player(str): Checks for a win for player 'X' or 'O'
@@ -30,7 +33,8 @@ def _check_rows(board, player):
 
 # fix not PEP-8 standard
 def _check_columns(board, player):
-    '''Check columns for win condition for a given player.
+    '''
+    Check columns for win condition for a given player.
     Args:
         board(list): 3x3 grid to represent game board
         player(str): Checks for a win for player 'X' or 'O'
@@ -44,7 +48,8 @@ def _check_columns(board, player):
     return False
 
 def _check_diagonals(board, player):
-    '''Check diagonals for win condition for a given player.
+    '''
+    Check diagonals for win condition for a given player.
     Args:
         board(list): 3x3 grid to represent game board
         player(str): Checks for a win for player 'X' or 'O'
@@ -58,7 +63,8 @@ def _check_diagonals(board, player):
     return False
 
 def is_win(board, player):
-    '''Check rows, columns, and diagonals for win condition for a given player.
+    '''
+    Check rows, columns, and diagonals for win condition for a given player.
     Args:
         board(list): 3x3 grid to represent game board
         player(str): Checks for a win for player 'X' or 'O'
@@ -69,7 +75,8 @@ def is_win(board, player):
     return _check_rows(board, player) or _check_columns(board, player) or _check_diagonals(board, player)
 
 def tally_wins(results):
-    '''Count the number of wins.
+    '''
+    Count the number of wins.
     Args:
         results (list):  a list of wins (bools)
 
@@ -79,7 +86,8 @@ def tally_wins(results):
     return sum(results)
 
 def valid_input(input_str):
-    """Checks if user input is valid.
+    """
+    Checks if user input is valid.
 
     Args:
         input_str (str): the user input string to be validated.
