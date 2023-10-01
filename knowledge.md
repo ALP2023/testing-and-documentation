@@ -58,3 +58,4 @@ The onboarding and readme documentation are particularly helpful, as it provide 
     - Avoiding unnecessary complexity and creating clear setups and teardowns for the tests, i.e. set up the initial state, perform actions, and then assert the expected outcomes, should make them easier to understand and maintain.
     - Having comprehensive test cases provides some level of confidence that the code works as expected
     - Proper documentation makes the code and testcases more readable and helps developers understand how to use the functions and what functionality the tests cases are testing for.
+    - A comment on GitHub (raising issue, PR, and closing) - it is VERY important to note the issue # assigned by GitHub, failure to use the correct issue # when commenting causes a whole world of pain. I've spent more time resolving this than fixing the code!
