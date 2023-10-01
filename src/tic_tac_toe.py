@@ -78,6 +78,32 @@ def tally_wins(results):
     '''
     return sum(results)
 
+def valid_input(input_str):
+    """Checks if user input is valid.
+
+    Args:
+        input_str (str): the user input string to be validated.
+
+    Returns:
+        bool: True if the input is valid, otherwise False.
+
+    The function checks whether the input string represents a valid move.
+    A valid input consist of two integers, in the range of 0 to 2 (inclusive), separated by a single space.
+    Any other input format is considered invalid.
+
+    Examples:
+        - Valid input: "0 2"
+        - Invalid input: "02" (no space), "0" (single integer), "3 4" (out of range),
+                        "a b" (non-integer characters)
+
+    Returns True for valid inputs and False for invalid ones.
+    """
+    try:
+        row, col = map(int, input_str.split())
+        return row in (0, 1, 2) and col in (0, 1, 2)
+    except ValueError:
+        return False
+
 def main():
     board = initialize_board()
     current_player = 'X'
@@ -86,22 +112,29 @@ def main():
 
     while moves < 9:
         print_board(board)
-        row, col = map(int, input(f"Player {current_player}, enter row and column (0-2) separated by space: ").split())
-        if board[row][col] == ' ':
-            board[row][col] = current_player
-            win = is_win(board, current_player)
-            results.append(win)
-            if win:
-                print_board(board)
-                print(f"Player {current_player} wins!")
-                return
-            current_player = 'O' if current_player == 'X' else 'X'
-            moves += 1
+        user_input = input(f"Player {current_player}, enter row and column (0-2) separated by a space: ")
+
+        if valid_input(user_input):
+            row, col = map(int, user_input.split())
+            if board[row][col] == ' ':
+                board[row][col] = current_player
+                win = is_win(board, current_player)
+                results.append(win)
+                if win:
+                    print_board(board)
+                    print(f"Player {current_player} wins!")
+                    return
+                current_player = 'O' if current_player == 'X' else 'X'
+                moves += 1
+            else:
+                print("Cell already occupied! Try again.")
         else:
-            print("Cell already occupied! Try again.")
+            print("Invalid input! Please enter two integers between 0 and 2 separated by a space.")
+
     print_board(board)
     print("It's a draw!")
     print(f"Number of wins during the game: {tally_wins(results)}")
+
 
 if __name__ == "__main__":
     main()

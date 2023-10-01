@@ -1,16 +1,8 @@
 import unittest
 
-from tic_tac_toe import initialize_board, is_win, tally_wins
+from tic_tac_toe import initialize_board, is_win, tally_wins, valid_input
 
-def is_valid_input(input_str):
-    try:
-        row, col = map(int, input_str.split())
-        return 0 <= row <= 2 and 0 <= col <= 2
-    except ValueError:
-        return False
 class TestTicTacToe(unittest.TestCase):
-    def test_invalid_pattern_single(self):
-        self.assertTrue(is_valid_input("0"))
 
     def test_initialize_board_creates_empty_board(self):
         """Test that initialize_board function returns an empty 3x3 board."""
@@ -35,6 +27,27 @@ class TestTicTacToe(unittest.TestCase):
         """Test that tally_wins function correctly counts the number of wins."""
         results = [True, False, True]
         self.assertEqual(tally_wins(results), 2)
+
+    def test_valid_input(self):
+        """Test that a valid user input doesn't raise an error."""
+        self.assertTrue(valid_input("0 2"))
+
+    def test_invalid_pattern_double(self):
+        """Test that an invalid user input of two valid integers without a space between raises an error."""
+        self.assertFalse(valid_input("02"))
+
+    def test_invalid_pattern_single(self):
+        """Test that an invalid user input of a single value raises an error."""
+        self.assertFalse(valid_input("0"))
+
+    def test_invalid_integers(self):
+        """Test that an invalid user input of two integers outside the range of 0-2 raises an error."""
+        self.assertFalse(valid_input("3 4"))
+
+    def test_invalid_string(self):
+        """Test that an invalid user input of string values raises an error."""
+        self.assertFalse(valid_input("a b"))
+
 
 # This allows running the tests by running the script
 if __name__ == '__main__':
