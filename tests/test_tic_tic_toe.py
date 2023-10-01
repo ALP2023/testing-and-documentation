@@ -37,7 +37,7 @@ class TestTicTacToe(unittest.TestCase):
         self.assertFalse(valid_input("02"))
 
     def test_invalid_pattern_single(self):
-        """Test that an invalid user input of a single value raises an error."""
+        """Test that an invalid user input of a single integer raises an error."""
         self.assertFalse(valid_input("0"))
 
     def test_invalid_integers(self):
